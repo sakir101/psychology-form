@@ -25,7 +25,7 @@ const Filter = () => {
   const handleSearchByName = async (name) => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/client/name/${name}`
+        `https://client-form-server.vercel.app/client/name/${name}`
       );
       const clientData = response.data;
       setClientInfo(clientData);
@@ -36,7 +36,9 @@ const Filter = () => {
 
   const handleSearchByID = async (id) => {
     try {
-      const response = await axios.get(`http://localhost:5000/client/id/${id}`);
+      const response = await axios.get(
+        `https://client-form-server.vercel.app/client/id/${id}`
+      );
       const clientData = response.data;
       console.log(clientData);
       setClientInfo(clientData);

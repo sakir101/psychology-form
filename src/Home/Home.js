@@ -7,7 +7,7 @@ const Home = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    fetch("http://localhost:5000/clientData", {
+    fetch("https://client-form-server.vercel.app/clientData", {
       method: "POST",
       headers: {
         "content-type": "application/json",
